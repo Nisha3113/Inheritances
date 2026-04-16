@@ -7,6 +7,7 @@ public class AppTest {
     @Test
     public void testInheritance() {
         Animal myDog = new Dog();
-        assertEquals("Woof", myDog.makeSound());
+        // Changed makeSound() to sound() to match Animal.java
+        assertEquals("Woof", myDog.sound());
     }
 }
