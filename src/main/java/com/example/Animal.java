@@ -1,7 +1,7 @@
 package com.example;
 
 public class Animal {
-    public String makeSound() {
-        return "Some generic sound";
+    public String sound() {
+        return "Some generic animal sound";
     }
 }
