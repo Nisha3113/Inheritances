@@ -4,21 +4,18 @@
          xsi:schemaLocation="http://apache.org http://apache.org">
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- Project Metadata -->
     <groupId>com.example</groupId>
     <artifactId>my-java-app</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <properties>
-        <!-- Set Java version to 17 (standard for modern apps) -->
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
-        <!-- JUnit 4 for Testing -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -29,14 +26,12 @@
 
     <build>
         <plugins>
-            <!-- Plugin to compile the code -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
             </plugin>
 
-            <!-- Plugin to create an executable JAR for the Docker image -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -45,7 +40,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <!-- Replace with your actual Main Class path -->
+                            <!-- This ensures the JAR knows to run Main.java -->
                             <mainClass>com.example.Main</mainClass>
                         </manifest>
                     </archive>
